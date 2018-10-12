@@ -24,8 +24,12 @@ public class RemovePalindrome {
 			String sttt = stringBuilder.toString();
 
 			if (str1[i].equals(sttt)) {
-				System.out.print(" ");
-			} else {
+				if(str1[i].length()==1){
+					System.out.print(str1[i]+" ");
+				}
+				
+			} 
+			else {
 				System.out.print(str1[i] + " ");
 			}
 		}
