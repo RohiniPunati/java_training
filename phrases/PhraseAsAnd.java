@@ -6,6 +6,8 @@ public class PhraseAsAnd {
 	public static void main(String[] args) {
 		
 	Scanner scanner=new Scanner(System.in);
+	Pojo pojo =new Pojo();
+	
 	System.out.println("Enter your sentence");
 	String input=scanner.nextLine();
 	String[] inputSplit=input.split("and");
@@ -13,6 +15,7 @@ public class PhraseAsAnd {
 	String[] lastname=inputSplit[1].split(" ");
 	String[] email=inputSplit[2].split(" ");
 	String[] password=inputSplit[3].split(" ");
+//	pojo.setFirstname(firstname);
 	for(int i=0;i<firstname.length;i++) {
 		if(firstname[i].length()<=3 ){
 			firstname[i].replaceAll(firstname[i],"");
@@ -21,7 +24,8 @@ public class PhraseAsAnd {
 			firstname[i].replaceAll(firstname[i],"");
 		}
 		else {
-			System.out.println("firstname :: "+ firstname[i]);
+			pojo.setFirstname(firstname[i]);
+			System.out.println("firstname :: "+ pojo.getFirstname());
 		}
 	}
 	for(int i=0;i<lastname.length;i++) {
@@ -32,7 +36,8 @@ public class PhraseAsAnd {
 			lastname[i].replaceAll(lastname[i],"");
 		}
 		else {
-			System.out.println("lastname :: "+ lastname[i]);
+			pojo.setLastname(lastname[i]);
+			System.out.println("lastname :: "+ pojo.getLastname());
 		}
 	}
 	for(int i=0;i<email.length;i++) {
@@ -43,7 +48,8 @@ public class PhraseAsAnd {
 			email[i].replaceAll(email[i],"");
 		}
 		else {
-			System.out.println("email :: "+ email[i]);
+			pojo.setEmail(email[i]);
+			System.out.println("email :: "+pojo.getEmail());
 		}
 	}
 	for(int i=0;i<password.length;i++) {
@@ -54,7 +60,8 @@ public class PhraseAsAnd {
 			password[i].replaceAll(password[i],"");
 		}
 		else {
-			System.out.println("password :: "+ password[i]);
+			pojo.setPassword(password[i]);
+			System.out.println("password :: "+ pojo.getPassword());
 		}
 	}
 
